@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const A=()=>{
+            setTimeout(() =>{
+                console.log('a complate');
+                return true;
+                }, 3000);
+            
+        }
+        const B=()=>{
+            setTimeout(() =>{
+                console.log('b complate');
+                return true;
+                }, 2000);    
+        }
+        const C=()=>{
+            setTimeout(() =>{
+                    console.log('C complate');
+                    return true;
+                }, 4000);
+        }
+            C(B(A()));
+           
+    console.log("ket thuc");
+    </script>
+</body>
+</html>
