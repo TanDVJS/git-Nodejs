@@ -8,28 +8,27 @@
 <body>
     <script>
 
-        const A=()=>{
+        const A=(b, c)=>{
             setTimeout(() =>{
                 console.log('a complate');
-                return true;
-                }, 3000);
-            
+                b(c)
+            }, 3000, b, c);
         }
-        const B=()=>{
+        const B=(c)=>{
             setTimeout(() =>{
                 console.log('b complate');
-                return true;
-                }, 2000);    
+                c()
+            }, 2000, c);
         }
         const C=()=>{
             setTimeout(() =>{
-                    console.log('C complate');
-                    return true;
-                }, 4000);
+                console.log('C complate');
+            }, 4000);
         }
-            C(B(A()));
+        
+        A(B, C)
            
-    console.log("ket thuc");
+    // console.log("ket thuc");
     </script>
 </body>
 </html>
